@@ -5,7 +5,10 @@ const initialState = {
   error: null,
   loading: false,
   profile:false,
-  showChat: false
+  showChat: false,
+  socket: null,
+  onlineUsers: [],
+  token : "",
 };
 
 const userSlice = createSlice({
@@ -19,6 +22,10 @@ const userSlice = createSlice({
       state.currentUser = action.payload;
       state.loading = false;
       state.error = null;
+      state.token = action.payload.token
+      state.socket = action.payload.socket
+      state.onlineUsers = action.payload.onlineUsers
+
     },
     signInFailure: (state, action) => {
       state.error = action.payload;
@@ -43,31 +50,43 @@ const userSlice = createSlice({
       state.currentUser = null;
       state.loading = false;
       state.error = null;
+      state.token = null
+      state.socket = null
+      state.onlineUsers = []
     },
     deleteUserFailure: (state, action) => {
       state.error = action.payload;
       state.loading = false;
+
     },
     signOutUserStart: (state) => {
       state.loading = true;
+
     },
     signOutUserSuccess: (state) => {
       state.currentUser = null;
       state.loading = false;
       state.error = null;
+      state.token = null
+      state.socket = null
     },
     signOutUserFailure: (state, action) => {
       state.error = action.payload;
       state.loading = false;
+
     },
     setAndUnSetProfile: (state)=>{
       state.profile = !state.profile
+
+
     },
     unSetProfile: (state)=>{
       state.profile = false
+
     },
     setAndUnsetChat: (state)=>{
       state.showChat = !state.showChat
+      
     },
     unSetChat: (state)=>{
       state.showChat = false

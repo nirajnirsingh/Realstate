@@ -6,7 +6,7 @@ import { deleteUserFailure, deleteUserSuccess, setAndUnSetProfile, signOutUserSt
 const Header = () => {
   const dispatch = useDispatch()
   const { currentUser } = useSelector((state) => state.user);
-  // console.log(currentUser)
+  console.log(currentUser?.isAdmin)
   const {profile} = useSelector((state)=>state.user)
   const handleProfile = () => {
     dispatch(setAndUnSetProfile())
@@ -55,6 +55,14 @@ const Header = () => {
               About
             </li>
           </Link>
+          {/* dashboard for only admin */}
+          {currentUser && currentUser.isAdmin && (
+            <Link to="/dashboard">
+              <li className="hidden sm:inline text-slate-700 hover:underline">
+                Dashboard
+              </li>
+            </Link>
+          )}
         </ul>
         {currentUser ? (
           <div className="inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
