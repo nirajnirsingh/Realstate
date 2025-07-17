@@ -131,7 +131,3 @@ Make sure you have the following installed on your machine:
 - ```Password``` admin
 
 
-
-## License
-
-This project is licensed under the MIT License.
