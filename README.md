@@ -1,10 +1,10 @@
-# Tamirat Real Estate  MERN Application
+# Real Estate  MERN Application
 
 This is a full-stack real estate  application that allows users to create, update, and view property listings. It uses a combination of React, Redux, Tailwind CSS on the frontend, and Node.js, Express, and MongoDB on the backend.
 
 ## Table of Contents
 
-- [Tamirat Real Estate  MERN Application](#tamirat-real-estate--mern-application)
+- [Real Estate  MERN Application](#tamirat-real-estate--mern-application)
   - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
     - [Demo link](#demo-link)
