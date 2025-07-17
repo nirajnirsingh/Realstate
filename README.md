@@ -28,26 +28,7 @@ This is a full-stack real estate  application that allows users to create, updat
 - [Email and Password To login](#email-and-password-to-login)
   - [License](#license)
 
-## Demo
-### Demo link
-  - [Demo link](https://youtu.be/FxPN9vLa3EI)
-### home Page
-<img src="uploads/screenshot_demo/home.png" />
 
-### Filtering RealEstate
-<img src="uploads/screenshot_demo/filtering.png" />
-
-### Comment For RealEstate
-<img src="uploads/screenshot_demo/comment_for_real_state.png" />
-
-
-### Live Chat With RealEstate Owner
-<img src="uploads/screenshot_demo/live_chat.png" />
-
-### Admin Dashboard
-<img src="uploads/screenshot_demo/admin dashboard.png" />
-
-## Features
 
 - User authentication
 - Create, update, and view property listings
